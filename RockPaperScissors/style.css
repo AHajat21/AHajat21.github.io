@@ -1,0 +1,28 @@
+body {
+    background-color: cornsilk
+}
+#user_choice {
+    color: blue;
+}
+
+#comp_choice {
+    color: red;
+}
+
+#rock {
+    background-color: sandybrown;
+    width: 200px;
+    height: 80px;
+}
+
+#paper {
+    background-color: white;
+    width: 200px;
+    height: 80px;
+}
+
+#scissors {
+    background-color: silver;
+    width: 200px;
+    height: 80px;
+}

@@ -1,0 +1,18 @@
+
+#grid {
+    width: 350px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    margin: 0 auto;
+}
+
+h3 {
+    display: block;
+    text-align: center;
+    color: midnightblue;
+}
