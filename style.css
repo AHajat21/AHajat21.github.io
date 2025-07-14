@@ -1,0 +1,10 @@
+.product {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	background-image: repeating-linear-gradient(107deg, white, yellow, green);
+	text-align: center;
+}
