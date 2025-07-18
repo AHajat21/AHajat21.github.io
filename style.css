@@ -1,8 +1,8 @@
 body {
 	background-image: repeating-linear-gradient(107deg, white, yellow, green);
 	text-align: center;
-	padding-left: 250px;
-	padding-right: 250px;
+	padding-left: 11%;
+	padding-right: 11%;
 }
 
 .product {
