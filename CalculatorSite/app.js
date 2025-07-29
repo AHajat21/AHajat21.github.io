@@ -33,7 +33,8 @@ buttons.forEach(button => {
 		}
 
 		else if (button.className === "operator") {
-			if (!isNaN(valuesArray[valuesArray.length - 1]) || valuesArray.length === 0 || valuesArray[valuesArray.length - 1] === "-") {
+			console.log("operator pressed");
+			if (!isNaN(valuesArray[valuesArray.length - 1]) || valuesArray.length === 0 || string != "") {
 				valuesArray.push(string);
 				valuesArray.push(e.target.innerText);
 				string = "";

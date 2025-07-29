@@ -1,26 +1,52 @@
 body {
-	background-image: repeating-linear-gradient(107deg, white, yellow, green);
+	background-image: repeating-linear-gradient(140deg, white, rgba(21, 0, 255, 0.526), rgba(69, 12, 12, 0.647));
 	text-align: center;
 	padding-left: 11%;
 	padding-right: 11%;
+	scroll-behavior: smooth;
 }
 
 .product {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 5px 5px 5px 5px;
+
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s 0.05s ease-in;
+}
+
+.product:hover {
+	transform: scale(1.05);
+	box-shadow: 12px 12px 80px 12px rgba(0, 0, 0, 0.3), -12px -12px 60px 12px rgba(0, 0, 0, 0.4);
 }
 
 .projectInfo {
 	border: 5px double red;
-	color: black;
-	font-size: 18px;
+	background-color: rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.722);
+	font-size: 15px;
 	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	padding-right: 20px;
-	padding-left: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	margin: auto auto;
+	padding: 10px 20px;
+	border-radius: 25px 25px 12px 12px;
+
+	transition: transform 0.3s 0.1s ease-in, color 0.3s 0.2s, background-color 0.3s 0.2s, border-color 0.3s 0.2s;
 }
 
+.projectInfo:hover {
+	background-color: rgb(0, 0, 0);
+	color: rgba(200, 200, 200, 0.83);
+	border-color: rgba(255, 0, 0, 0.8);
+	transform: scale(1.1, 1.05) translateY(-20px);
+}
+
+p img {
+	animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+	0% {transform: rotateY(-90deg);}
+	30% {transform: rotateY(-10deg);}
+	70% {transform: rotateY(20deg);}
+	100% {transform: rotateY(270deg);}
+}

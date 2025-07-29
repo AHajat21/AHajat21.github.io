@@ -1,5 +1,5 @@
 body {
-	background-color: lightblue;
+	background-color: rgba(107, 107, 255, 0.712);
 	margin: auto;
 	margin-top: 50px;
 	width: 320px;
@@ -28,6 +28,7 @@ button {
 }
 button:hover {
 	background-color: grey;
+	box-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 #equals {
@@ -41,6 +42,7 @@ button:hover {
 #inp {
 	background-color: lightgrey;
 	width: 250px;
+	height: 48px;
 	border: 6px groove grey;
 	border-radius: 5px;
 	margin: auto;
@@ -55,19 +57,7 @@ button:hover {
 	font-size: 25px;
 }
 .num:hover {
-		background-color: darkgoldenrod;
-}
-
-#clear {
-	
-}
-
-#reverseSign {
-	
-}
-
-#del {
-	
+	background-color: darkgoldenrod;
 }
 
 
