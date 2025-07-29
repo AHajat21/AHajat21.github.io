@@ -1,0 +1,55 @@
+body {
+	background-color: #f9f9f9;
+	display: flex;
+	justify-content: center;
+	margin-top: 10%;
+
+}
+
+#fullDate {
+	row-gap: 10px;
+	grid-area: 1 / 1 / 2 / 7;
+	padding-left: 10px;
+	border-right: 3px solid black;
+	border-bottom: 3px solid black;
+}
+
+
+#MY {
+	grid-area: 2 / 2 / 2 / 7;
+	text-align: center;
+	margin-top: 3px;
+}
+
+.day {
+	border-left: 1px dashed black;
+	font-size: 12px;
+	text-align: center;
+	align-content: end;
+}
+
+.dateSelector {
+	border: 3px solid black;
+	box-shadow: 5px 5px 20px 7px darkgrey ;
+	border-radius: 2px 5px 5px 2px;
+	display: grid;
+	width: 245px;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 20px 30px 20px repeat(5, 50px);
+}
+
+.item {
+	background-color: #f0f0f0;
+	border: 1px solid;
+	border-bottom-left-radius: 3px;
+	place-content: center;
+	text-align: center;
+	font-size: 18px;
+	cursor: pointer;
+}
+.item:hover {
+	background-color: #e0e0e0;
+}
+.item:active {
+	background-color: #d0d0d0;
+}
