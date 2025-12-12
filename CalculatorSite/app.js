@@ -28,12 +28,17 @@ buttons.forEach(button => {
 		}
 
 		else if (button.className === "num" && string.length < 12) {
-			string += e.target.innerText;
-			inputBox.innerText = string;
+			// LOGIC FOR DIVIDE BY 0
+			if (button.innerText === "0" && valuesArray[valuesArray.length-1] === "/") {
+				alert("Maths error: can't divide by 0")
+			}
+			else {
+				string += e.target.innerText;
+				inputBox.innerText = string;
+			}
 		}
 
 		else if (button.className === "operator") {
-			console.log("operator pressed");
 			if (!isNaN(valuesArray[valuesArray.length - 1]) || valuesArray.length === 0 || string != "") {
 				valuesArray.push(string);
 				valuesArray.push(e.target.innerText);
@@ -47,25 +52,28 @@ buttons.forEach(button => {
 		else if (button.id === "equals") {
 			valuesArray.push(string);
 			string = "";
-			total = 0;
+
+			// BIDMAS
+			while (true) {
+				let multiplication = valuesArray.indexOf("x")
+				if (multiplication === -1) {break;}
+				let result = Number(valuesArray[multiplication-1]) * Number(valuesArray[multiplication+1])
+				valuesArray.splice(multiplication-1, 3, result.toString())
+			}
+	 		while (true) {
+				let division = valuesArray.indexOf("/")
+				if (division === -1) {break;}
+				let result = Number(valuesArray[division-1]) / Number(valuesArray[division+1])
+				valuesArray.splice(division-1, 3, result.toString())
+			}
+
 			total = Number(valuesArray[0]);
-			for (let i = 2; i < valuesArray.length; i+=2) {
-				if (valuesArray[i - 1] === "+") {
-					total += Number(valuesArray[i]);
+			for (let i = 1; i < valuesArray.length; i+=2) {
+				if (valuesArray[i] === "+") {
+					total += Number(valuesArray[i + 1]);
 				}
-				else if (valuesArray[i - 1] === "-") {
-					total -= Number(valuesArray[i]);
-				}
-				else if (valuesArray[i - 1] === "x") {
-					total *= Number(valuesArray[i]);
-				}
-				else if (valuesArray[i - 1] === "/") {
-					if (Number(valuesArray[i]) === 0) {
-						alert("Cannot divide by zero");
-						total = "Error";
-					} else {
-						total /= Number(valuesArray[i]);
-					}
+				else if (valuesArray[i] === "-") {
+					total -= Number(valuesArray[i + 1]);
 				}
 			}
 
